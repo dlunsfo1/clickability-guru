@@ -13,7 +13,9 @@ const Post = props => (
 
 Post.getInitialProps = async function(context) {
   const { id, seoURL, wss } = context.query;
-  const res = await fetch(`http://localhost:3000/api/${id}/${seoURL}`);
+  const res = await fetch(
+    `https://lmfhj16wk4.execute-api.us-east-1.amazonaws.com/dev/api/${id}/${seoURL}`
+  );
   const content = await res.json();
   console.log(`Fetched show: ${content.title}`);
   return { content };

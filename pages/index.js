@@ -21,7 +21,9 @@ const Index = props => (
 );
 
 Index.getInitialProps = async function() {
-  const res = await fetch('http://localhost:3000/api/Topics');
+  const res = await fetch(
+    'https://lmfhj16wk4.execute-api.us-east-1.amazonaws.com/dev/api/topics'
+  );
   const data = await res.json();
 
   console.log(

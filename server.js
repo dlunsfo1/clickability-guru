@@ -9,9 +9,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-
     server.get('/:wss/:id/:seoURL', (req, res) => {
-      console.log('here!');
       const actualPage = '/post';
       const queryParams = { id: req.params.id };
       app.render(req, res, actualPage, queryParams);
@@ -29,6 +27,6 @@ app
     });
   })
   .catch(ex => {
-    console.log(ex.stack);
+    console.log('server error ', ex.stack);
     process.exit(1);
   });
