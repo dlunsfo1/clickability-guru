@@ -10,7 +10,8 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/p/:id', (req, res) => {
+    server.get('/:wss/:id/:seoURL', (req, res) => {
+      console.log('here!');
       const actualPage = '/post';
       const queryParams = { id: req.params.id };
       app.render(req, res, actualPage, queryParams);

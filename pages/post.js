@@ -3,18 +3,19 @@ import fetch from 'isomorphic-unfetch';
 
 const Post = props => (
   <Layout>
-    <h1>{props.show.name}</h1>
-    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-    <img src={props.show.image.medium} />
+    <h1>{props.content.title}</h1>
+    {/* <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+    <img src={props.show.image.medium} /> */}
   </Layout>
 );
 
 Post.getInitialProps = async function(context) {
-  const { id } = context.query;
-  const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  console.log('context ', context);
+  const { id, seoURL, wss } = context.query;
+  const res = await fetch(`http://localhost:3000/api/${id}/${seoURL}`);
   const show = await res.json();
 
-  console.log(`Fetched show: ${show.name}`);
+  console.log(`Fetched show: ${content.title}`);
 
   return { show };
 };
