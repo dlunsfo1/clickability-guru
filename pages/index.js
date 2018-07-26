@@ -2,21 +2,6 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 
-{
-  /* <Layout>
-<h1>Batman TV Shows</h1>
-<ul>
-  {props.shows.map(({ show }) => (
-    <li key={show.id}>
-      <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-        <a>{show.name}</a>
-      </Link>
-    </li>
-  ))}
-</ul>
-</Layout> */
-}
-
 const Index = props => (
   <Layout>
     <h1>Clickability Guru</h1>

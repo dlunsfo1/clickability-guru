@@ -12,13 +12,10 @@ const Post = props => (
 );
 
 Post.getInitialProps = async function(context) {
-  console.log('context ', context);
   const { id, seoURL, wss } = context.query;
   const res = await fetch(`http://localhost:3000/api/${id}/${seoURL}`);
   const content = await res.json();
-  console.log(content);
   console.log(`Fetched show: ${content.title}`);
-
   return { content };
 };
 
