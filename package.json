@@ -1,0 +1,28 @@
+{
+  "name": "clickability-guru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlunsfo1/clickability-guru.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlunsfo1/clickability-guru/issues"
+  },
+  "homepage": "https://github.com/dlunsfo1/clickability-guru#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "isomorphic-unfetch": "^2.1.0",
+    "next": "^6.1.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
