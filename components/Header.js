@@ -6,9 +6,9 @@ const linkStyle = {
 
 const Header = () => (
   <div>
-    <Link as={'/'} href="/">
+    {/* <Link as={'/'} href="/">
       <a style={linkStyle}>Home</a>
-    </Link>
+    </Link> */}
     <Link href="/about">
       <a style={linkStyle}>About</a>
     </Link>
