@@ -2,9 +2,6 @@ import Layout from '../components/Layout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 
-const API_URL =
-  'https://cz2nml4s7l.execute-api.us-east-1.amazonaws.com/beta/api';
-
 const Index = props => (
   <Layout>
     <h1>Clickability Guru</h1>
@@ -24,7 +21,7 @@ const Index = props => (
 );
 
 Index.getInitialProps = async function() {
-  const res = await fetch(`${API_URL}/topics`);
+  const res = await fetch(`${process.env.API_URL}/topics`);
   const data = await res.json();
 
   console.log(
